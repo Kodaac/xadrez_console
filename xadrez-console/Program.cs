@@ -7,8 +7,7 @@ namespace xadrez_console // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-            Posicao p = new Posicao(3, 4);
-            Console.WriteLine("Posição: " + p);
+            TabuleiroXadrez tab = new TabuleiroXadrez(8, 8);
             
 
         }
