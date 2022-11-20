@@ -4,7 +4,7 @@ namespace xadrez_console
 {
     internal class Tela
     {
-        public static void ImprimirTabuleiro(TabuleiroXadrez tab) { 
+        public static void imprimirTabuleiro(TabuleiroXadrez tab) { 
         
             for(int i = 0; i < tab.Linhas; i++)
             {

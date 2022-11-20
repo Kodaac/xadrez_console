@@ -8,17 +8,23 @@ namespace xadrez_console // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-            TabuleiroXadrez tab = new TabuleiroXadrez(8, 8);
+            try
+            {
+                TabuleiroXadrez tab = new TabuleiroXadrez(8, 8);
 
-            tab.ColocarPeca(new Torre(tab, Cor.Preta), new Posicao(0,0));
-            tab.ColocarPeca(new Torre(tab, Cor.Preta), new Posicao(1,3));
-            tab.ColocarPeca(new Rei(tab, Cor.Preta), new Posicao(2,4));
+                tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(0, 0));
 
-            Tela.ImprimirTabuleiro(tab);
+                tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(1, 3));
+                tab.colocarPeca(new Rei(tab, Cor.Preta), new Posicao(0, 2));
 
-            Console.ReadLine();
-            
+                Tela.imprimirTabuleiro(tab);
 
+                Console.ReadLine();
+
+            } catch(TabuleiroException e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }
