@@ -8,6 +8,10 @@ namespace xadrez_console // Note: actual namespace depends on the project name.
         static void Main(string[] args)
         {
             TabuleiroXadrez tab = new TabuleiroXadrez(8, 8);
+
+            Tela.ImprimirTabuleiro(tab);
+
+            Console.ReadLine();
             
 
         }
